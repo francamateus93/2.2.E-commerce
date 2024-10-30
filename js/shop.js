@@ -95,6 +95,7 @@ function buy(id) {
 function cleanCart() {
   cart = [];
 }
+
 cleanCart();
 
 // Exercise 3
@@ -111,7 +112,6 @@ function calculateTotal() {
 // Exercise 4
 function applyPromotionsCart(cart) {
   // Apply promotions to each item in the array "cart"
-  let subtotalWithDiscount = 0;
 
   for (let i = 0; i < cart.length; i++) {
     let product = cart[i];
@@ -131,8 +131,22 @@ function applyPromotionsCart(cart) {
 // Exercise 5
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
-  const carList = document.getElementById("cart_list");
-  carList.innerHTML = "";
+  const cartList = document.getElementById("cart_list");
+  cartList.innerHTML = "";
+
+  cart.forEach((product) => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `<th scope=row>${product.name}</th>
+    <td>${product.price}</td>
+    <td>${product.quantity}</td>
+    <td>${
+      product.subtotalWithDiscount || product.price * product.quantity
+    }</td>`;
+    cartList.appendChild(row);
+  });
+
+  calculateTotal();
 }
 
 // ** Nivell II **
