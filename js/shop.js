@@ -86,35 +86,38 @@ function buy(id) {
       verifyCart.quantity += 1;
     } else {
       cart.push({ ...findProduct, quantity: 1 });
+      console.log(cart);
     }
   }
+}
 
-  buy();
+// Exercise 2
+function cleanCart() {
+  cart.splice(0, cart.length);
+}
 
-  // Exercise 2
-  function cleanCart() {}
+cleanCart();
 
-  // Exercise 3
-  function calculateTotal() {
-    // Calculate total price of the cart using the "cartList" array
-  }
+// Exercise 3
+function calculateTotal() {
+  // Calculate total price of the cart using the "cartList" array
+}
 
-  // Exercise 4
-  function applyPromotionsCart() {
-    // Apply promotions to each item in the array "cart"
-  }
+// Exercise 4
+function applyPromotionsCart() {
+  // Apply promotions to each item in the array "cart"
+}
 
-  // Exercise 5
-  function printCart() {
-    // Fill the shopping cart modal manipulating the shopping cart dom
-  }
+// Exercise 5
+function printCart() {
+  // Fill the shopping cart modal manipulating the shopping cart dom
+}
 
-  // ** Nivell II **
+// ** Nivell II **
 
-  // Exercise 7
-  function removeFromCart(id) {}
+// Exercise 7
+function removeFromCart(id) {}
 
-  function open_modal() {
-    printCart();
-  }
+function open_modal() {
+  printCart();
 }
