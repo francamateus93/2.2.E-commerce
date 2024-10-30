@@ -1,2 +1,0 @@
-- gestión del carrito de la compra
-- aplicación de las promociones sobre el precio final
