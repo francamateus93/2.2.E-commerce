@@ -79,11 +79,11 @@ var total = 0;
 // 2. Add found product to the cart array
 function buy(id) {
   let findProduct = products.find((i) => i.id === id);
-  let verifyCart = cart.find((i) => i.id === id);
+  let cartProduct = cart.find((i) => i.id === id);
 
   if (findProduct) {
-    if (verifyCart) {
-      verifyCart.quantity += 1;
+    if (cartProduct) {
+      cartProduct.quantity += 1;
     } else {
       cart.push({ ...findProduct, quantity: 1 });
       console.log(cart);
@@ -109,13 +109,30 @@ function calculateTotal() {
 }
 
 // Exercise 4
-function applyPromotionsCart() {
+function applyPromotionsCart(cart) {
   // Apply promotions to each item in the array "cart"
+  let subtotalWithDiscount = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    let product = cart[i];
+
+    if (product.id === 1 && product.quantity >= 3) {
+      product.subtotalWithDiscount = product.price * product.quantity * 0.8;
+    } else if (product.id === 3 && product.quantity >= 10) {
+      product.subtotalWithDiscount = product.price * product.quantity * 0.7;
+    } else {
+      product.subtotalWithDiscount = product.price * product.quantity;
+    }
+    console.log(subtotalWithDiscount);
+    console.log(cart);
+  }
 }
 
 // Exercise 5
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
+  const carList = document.getElementById("cart_list");
+  carList.innerHTML = "";
 }
 
 // ** Nivell II **
