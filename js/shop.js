@@ -153,7 +153,19 @@ function printCart() {
 // ** Nivell II **
 
 // Exercise 7
-function removeFromCart(id) {}
+function removeFromCart(id) {
+  let product = cart.find((i) => i.id === id);
+
+  if (product) {
+    if (product.quantity === 1) {
+      cart.splice(product, 1);
+    } else {
+      product.quantity -= 1;
+    }
+  }
+}
+
+applyPromotionsCart(cart);
 
 function open_modal() {
   printCart();

@@ -9,7 +9,9 @@ function validate() {
   let fPassword = document.getElementById("fPassword");
   let fPhone = document.getElementById("fPhone");
 
-  let preventDefault = document.getElementById("btn");
+  // let preventDefault = document.getElementById("btn");
+  // preventDefault.addEventListener("click", function (event) {
+  //   event.preventDefault();
 
   // Get the error elements
   let errorName = document.getElementById("errorName");
@@ -20,8 +22,6 @@ function validate() {
   let errorPhone = document.getElementById("errorPhone");
 
   // Validate fields entered by the user: name, phone, password, and email
-  // preventDefault.addEventListener("click", function (event) {
-  //   event.preventDefault();
 
   if (fName.value.length < 3 || !/^[A-Za-z]+$/.test(fName.value)) {
     error++;
