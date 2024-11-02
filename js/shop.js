@@ -135,6 +135,9 @@ function printCart() {
   const cartList = document.getElementById("cart_list");
   cartList.innerHTML = "";
 
+  const totalCartList = document.getElementById("total_price");
+  totalCartList.innerHTML = "";
+
   cart.forEach((product) => {
     const row = document.createElement("tr");
 
@@ -146,6 +149,14 @@ function printCart() {
     }</td>`;
     cartList.appendChild(row);
   });
+
+  const totalCart = cart.reduce((total, product) => {
+    return (
+      total + (product.subtotalWithDiscount || product.price * product.quantity)
+    );
+  }, 0);
+
+  totalCartList.innerHTML = `${totalCart}€`;
 
   calculateTotal();
 }
