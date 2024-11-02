@@ -165,7 +165,7 @@ function printCart() {
     );
   }, 0);
 
-  totalCartList.innerHTML = `${totalCart.toFixed(2)}€`;
+  totalCartList.innerHTML = `${totalCart.toFixed(2)}`;
 
   calculateTotal();
 }
@@ -179,20 +179,6 @@ function addFromCart(id) {
     printCart();
   }
 }
-
-// function decreaseQuantity(id) {
-//   const product = cart.find((i) => i.id === id);
-
-//   if (product) {
-//     if (product.quantity > 1) {
-//       product.quantity -= 1;
-//     } else {
-//       cart = cart.filter((i) => i.id !== id);
-//     }
-//     applyPromotionsCart(cart);
-//     printCart();
-//   }
-// }
 
 printCart();
 
