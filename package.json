@@ -4,7 +4,8 @@
   "description": "**📄 Descripción**",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-css": "sass --watch scss/style.scss:scss/style.css"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +15,5 @@
   },
   "devDependencies": {
     "sass": "^1.80.6"
-  }
-}
-{
-  "scripts": {
-    "sass": "sass --watch src/scss/style.scss:dist/css/style.css"
   }
 }
