@@ -79,16 +79,23 @@ var total = 0;
 // 1. Loop for to the array products to get the item to add to cart
 // 2. Add found product to the cart array
 function buy(id) {
-  let findProduct = products.find((i) => i.id === id);
-  let cartProduct = cart.find((i) => i.id === id);
+  const findProduct = products.find((i) => i.id === id);
+  const cartProduct = cart.find((i) => i.id === id);
+
+  const countProduct = document.getElementById("count_product");
 
   if (findProduct) {
     if (cartProduct) {
       cartProduct.quantity += 1;
     } else {
       cart.push({ ...findProduct, quantity: 1 });
-      console.log(cart);
     }
+
+    const totalCart = cart.reduce(
+      (total, product) => total + product.quantity,
+      0
+    );
+    countProduct.innerHTML = `${totalCart}`;
   }
 }
 
@@ -106,8 +113,8 @@ function calculateTotal() {
 
   for (let i = 0; i < cart.length; i++) {
     total += cart[i].price * cart[i].quantity;
-    return total;
   }
+  return Number(total.toFixed(2));
 }
 
 // Exercise 4
@@ -115,7 +122,7 @@ function applyPromotionsCart(cart) {
   // Apply promotions to each item in the array "cart"
 
   for (let i = 0; i < cart.length; i++) {
-    let product = cart[i];
+    const product = cart[i];
 
     if (product.id === 1 && product.quantity >= 3) {
       product.subtotalWithDiscount = product.price * product.quantity * 0.8;
@@ -124,14 +131,14 @@ function applyPromotionsCart(cart) {
     } else {
       product.subtotalWithDiscount = product.price * product.quantity;
     }
-    console.log(subtotalWithDiscount);
-    console.log(cart);
   }
 }
 
 // Exercise 5
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
+  applyPromotionsCart(cart);
+
   const cartList = document.getElementById("cart_list");
   cartList.innerHTML = "";
 
@@ -144,9 +151,11 @@ function printCart() {
     row.innerHTML = `<th scope=row>${product.name}</th>
     <td>${product.price}</td>
     <td>${product.quantity}</td>
-    <td>${
+    <td>${Number(
       product.subtotalWithDiscount || product.price * product.quantity
-    }</td>`;
+    ).toFixed(2)}</td>
+    <button onclick="addFromCart(${product.id})">+</button>
+    <button onclick="removeFromCart(${product.id})">-</button>`;
     cartList.appendChild(row);
   });
 
@@ -156,16 +165,42 @@ function printCart() {
     );
   }, 0);
 
-  totalCartList.innerHTML = `${totalCart}€`;
+  totalCartList.innerHTML = `${totalCart.toFixed(2)}€`;
 
   calculateTotal();
 }
+
+function addFromCart(id) {
+  const product = cart.find((i) => i.id === id);
+
+  if (product) {
+    product.quantity += 1;
+    applyPromotionsCart(cart);
+    printCart();
+  }
+}
+
+// function decreaseQuantity(id) {
+//   const product = cart.find((i) => i.id === id);
+
+//   if (product) {
+//     if (product.quantity > 1) {
+//       product.quantity -= 1;
+//     } else {
+//       cart = cart.filter((i) => i.id !== id);
+//     }
+//     applyPromotionsCart(cart);
+//     printCart();
+//   }
+// }
+
+printCart();
 
 // ** Nivell II **
 
 // Exercise 7
 function removeFromCart(id) {
-  let product = cart.find((i) => i.id === id);
+  const product = cart.find((i) => i.id === id);
 
   if (product) {
     if (product.quantity === 1) {
@@ -173,6 +208,8 @@ function removeFromCart(id) {
     } else {
       product.quantity -= 1;
     }
+    applyPromotionsCart(cart);
+    printCart();
   }
 }
 
