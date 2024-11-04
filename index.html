@@ -15,10 +15,8 @@
 	<link rel="stylesheet" href="scss/style.css">
 
 	<!-- Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
 		rel="stylesheet">
 </head>
 
@@ -41,7 +39,7 @@
 								<path fill="#ffffff"
 									d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
 							</svg>
-							<span class="text-white fs-5 fw-normal ms-2" id="count_product">0</span>
+							<span class="text-white fs-6 fw-normal ms-2" id="count_product">0</span>
 						</a>
 					</li>
 				</ul>
@@ -52,13 +50,13 @@
 
 				<ul class="navbar-nav gap-3 mb-4 mb-lg-0 ms-lg-5 fs-5">
 					<li class="nav-item">
-						<a class="nav-link text-white text-uppercase" href="#grocery">Grocery</a>
+						<a class="nav-link text-white" href="#clothing">Clothing</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white text-uppercase" href="#beauty">Beauty</a>
+						<a class="nav-link text-white" href="#shoes">Shoes</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white text-uppercase" href="#clothes">Clothes</a>
+						<a class="nav-link text-white" href="#accessory">Accessory</a>
 					</li>
 
 				</ul>
@@ -70,70 +68,50 @@
 	<header class="bg-header d-flex align-items-center py-5">
 		<div class="container justify-content-center px-4 my-lg-5">
 			<div class="text-lg-start text-center text-white">
-				<h1 class="display-4 lh-1 fw-bolder">The best products for you day.</h1>
-				<p class="lead lh-sm fs-1 fw-normal text-white">Get up to 50% off Today Only!</p>
-				<button type="button" class="btn text-uppercase mb-2">Shop Now</button>
-				<button type="button" class="btn text-uppercase mb-2">Find More</button>
+				<h1 class="display-4 lh-1 fw-bolder">We play different.</h1>
+				<p class="lead lh-sm fs-2 fw-normal text-white">Get up to 50% off Today Only!</p>
+				<button type="button" class="btn mb-2">Shop Now</button>
+				<button type="button" class="btn mb-2">Find More</button>
 			</div>
 		</div>
 	</header>
-	<!-- Section-->
-	<section class="pt-5" id="grocery">
-		<h2 class="text-center"><i class="fas fa-shopping-basket pe-3"></i>Grocery</h2>
-		<div class="container px-4 px-lg-5 mt-5">
-			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-				<div class="col mb-5">
-					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
-							<div class="text-center">
-								<h5 class="fw-bolder">Cooking Oil</h5>
-								$10.5
-							</div>
-						</div>
-						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-							<div class="text-center"><button type="button" onclick="buy(1)" class="btn btn-primary">Add to
-									cart</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col mb-5">
-					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
-							<div class="text-center">
-								<h5 class="fw-bolder">Pasta</h5>
-								$6.25
-							</div>
-						</div>
-						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-							<div class="text-center"><button type="button" onclick="buy(2)" class="btn btn-primary">Add to
-									cart</button></div>
-						</div>
-					</div>
-				</div>
-				<div class="col mb-5">
-					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
-							<div class="text-center">
-								<h5 class="fw-bolder">Instant cupcake mixture</h5>
-								$5
-							</div>
-						</div>
-						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-							<div class="text-center"><button type="button" onclick="buy(3)" class="btn btn-primary">Add to
-									cart</button></div>
-						</div>
-					</div>
-				</div>
 
+	<!-- Section-->
+	<section class="container pt-5" id="clothing">
+		<h2 class="text-center">Clothing</h2>
+		<div class="container px-4 px-lg-5 mt-5">
+			<div class="row gx-4 cols-2 row-cols-md-3 justify-content-between mx-0">
+				<div class="col-md-4 col-sm-12 mb-4">
+					<div class="product-card" style="background-image: url('images/clothing-1.jpg');">
+						<div class="gradient-overlay"></div>
+						<!-- <span class="product-name">50% off</span> -->
+						<button class="product-btn mx-auto my-3" onclick="buy(1)">50% OFF<svg xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512" height="22" class="ms-2">
+								<path fill="#ffffff"
+									d="M0 55.2L0 426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320l118.1 0c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z" />
+							</svg></button>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 mb-4">
+					<div class="product-card" style="background-image: url('images/clothing-2.jpg');">
+						<div class="gradient-overlay"></div>
+						<!-- <span class="product-name">Men's clothes</span> -->
+						<button class="product-btn mx-auto my-3" onclick="buy(2)">Men's clothes</button>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12 mb-4">
+					<div class="product-card" style="background-image: url('images/clothing-3.jpg');">
+						<div class="gradient-overlay"></div>
+						<!-- <span class="product-name">Women's clothes</span> -->
+						<button class="product-btn mx-auto my-3" onclick="buy(3)">Women's clothes</button>
+					</div>
+				</div>
 			</div>
 		</div>
+		</div>
 	</section>
-	<section class="pt-5" id="beauty">
-		<h2 class="text-center"><i class="fas fa-heart pe-3"></i>Beauty</h2>
+	<section class="pt-5" id="shoes">
+		<h2 class="text-center">Shoes</h2>
 		<div class="container px-4 px-lg-5 mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 				<div class="col mb-5">
@@ -185,8 +163,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="pt-5" id="clothes">
-		<h2 class="text-center"><i class="fas fa-tshirt pe-3"></i>Clothes</h2>
+	<section class="pt-5" id="accessory">
+		<h2 class="text-center">Accessory</h2>
 		<div class="container px-4 px-lg-5 mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 				<div class="col mb-5">
