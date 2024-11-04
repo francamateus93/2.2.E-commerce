@@ -151,7 +151,7 @@ $primary-color: rgb(255, 95, 0);
   font-weight: bold;
   color: #333;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid red;
+  border-bottom: 4px solid rgb(220, 0, 0);
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -170,5 +170,59 @@ $primary-color: rgb(255, 95, 0);
 
 .product-btn-shoes:hover {
   background-color: rgba(59, 59, 59, 0.3);
+  border: none;
+}
+
+// Card
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  
+}
+
+.card-price {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.2rem;
+}
+
+.card-rating {
+  font-size: 0.8rem;
+  color: #777;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.card-btn {
+  background-color: rgb(0, 170, 136);
+  border: none;
+  color: white;
+  padding: 1rem 2.2rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.card-btn:hover {
+  background-color: rgba(0, 170, 136, 0.6);
   border: none;
 }
