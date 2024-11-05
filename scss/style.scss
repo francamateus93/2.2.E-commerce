@@ -185,7 +185,7 @@ $primary-color: rgb(255, 95, 0);
 
 .card-price {
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-top: 0.8rem;
   margin-bottom: 0;
 }
@@ -206,6 +206,12 @@ $primary-color: rgb(255, 95, 0);
   color: #777;
   font-weight: 700;
   margin-left: 0.5rem;
+}
+
+.card-discount {
+  background-color: #198754;
+  color: white;
+  padding: 0.2rem;
 }
 
 .card-btn {
