@@ -56,7 +56,7 @@ body {
 
 .btn-shop {
   background-color: white;
-  color: rgb(56, 56, 56);
+  color: #333;
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
@@ -218,6 +218,49 @@ body {
 .card-btn:hover {
   background-color: black;
   border: 2px solid black;
+  color: white;
+}
+
+.modal-dialog {
+  max-width: 740px;
+}
+
+.custom-width-modal {
+  max-width: 740px;
+  margin: auto;
+}
+
+.btn-add {
+  color: #198754;
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.btn-remove {
+  color: red;
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.card-checkout {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  padding: 1rem 2.2rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.card-checkout:hover {
+  background-color: #198754;
+  border: 2px solid #198754;
   color: white;
 }
 

@@ -137,13 +137,17 @@ function printCart() {
     const row = document.createElement("tr");
 
     row.innerHTML = `<th scope=row>${product.name}</th>
-    <td>${product.price}</td>
+    <td>$${product.price}</td>
     <td>${product.quantity}</td>
-    <td>${Number(
+    <td>$${Number(
       product.subtotalWithDiscount || product.price * product.quantity
     ).toFixed(2)}</td>
-    <button onclick="addFromCart(${product.id})">+</button>
-    <button onclick="removeFromCart(${product.id})">-</button>`;
+        <td><button class="btn-add" onclick="addFromCart(${
+          product.id
+        })">+</button></td>
+    <td><button class="btn-remove" onclick="removeFromCart(${
+      product.id
+    })">-</button></td>`;
     cartList.appendChild(row);
   });
 
