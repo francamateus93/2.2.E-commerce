@@ -11,7 +11,7 @@ function validate() {
 
   // let preventDefault = document.getElementById("btn");
   // preventDefault.addEventListener("click", function (event) {
-  //   event.preventDefault();
+  // event.preventDefault();})
 
   // Get the error elements
   let errorName = document.getElementById("errorName");
@@ -73,5 +73,3 @@ function validate() {
     alert("Form submitted!");
   }
 }
-//   });
-// }

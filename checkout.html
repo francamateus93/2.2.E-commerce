@@ -9,56 +9,217 @@
 	<title>Checkout</title>
 	<!-- Favicon-->
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-	<!-- Fontawesome icons-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="scss/style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- Font -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		rel="stylesheet">
 
 </head>
 
-<body>
+<body class="bg-light">
 	<!-- Navigation-->
-	<nav class="navbar py-3 py-lg-0 navbar-light bg-light navbar-expand-lg" id="navbar-example2">
-		<div class="container d-flex">
-			<a class="navbar-brand" href="#!">ShopNow</a>
+	<nav class="navbar py-3 py-lg-0 bg-light navbar-expand-lg" id="navbar-example2">
+		<div class="container d-flex mt-1 px-4">
+			<a class="navbar-brand" href="index.html"><img src="images/favicon.ico" alt="logo" width="40"></a>
 			<div class="d-flex flex-row order-lg-last align-items-center">
 
-				<button type="button" class="navbar-toggler order-last collapsed" data-bs-toggle="collapse"
+				<button type="button" class="navbar-toggler border-0 order-last collapsed" data-bs-toggle="collapse"
 					data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+						</svg></span>
 				</button>
-				<ul class="navbar-nav me-3 me-lg-0 d-flex flex-row align-items-center">
+				<ul class="navbar-nav me-1 me-lg-0 d-flex flex-row align-items-center">
 					<li class="dropdown search-dropdown nav-item py-lg-3">
-						<a href="javascript:void(0)" class="btn btn-outline-dark flex-center" type="button" data-bs-toggle="modal"
+						<a href="javascript:void(0)" class="btn d-flex align-items-center" type="button" data-bs-toggle="modal"
 							data-bs-target="#cartModal" onclick="open_modal()" data-bs-auto-close="outside">
-							<i class="fas fa-shopping-cart me-1"></i> Cart <span class="badge bg-dark text-white ms-1 rounded-pill"
-								id="count_product">0</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24">
+								<path fill="#000000"
+									d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+							</svg>
 						</a>
 					</li>
 				</ul>
 			</div>
 
-			<div id="navbar" class="navbar-collapse collapse">
-
-				<ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5">
+			<div id="navbar" class="navbar-collapse collapse my-2 my-md-4">
+				<ul class="navbar-nav gap-1 mb-0 ms-lg-5 fs-5">
 					<li class="nav-item">
-						<a class="nav-link" href="#grocery"><i class="fas fa-shopping-basket"></i> Grocery</a>
+						<a class="nav-link text-dark" href="#clothing">Clothing</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#beauty"><i class="fas fa-heart"></i> Beauty</a>
+						<a class="nav-link text-dark" href="#shoes">Shoes</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#clothes"><i class="fas fa-tshirt"></i> Clothes</a>
+						<a class="nav-link text-dark" href="#accessory">Accessory</a>
 					</li>
-
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="container">
+
+	<!-- Main -->
+	<div class="container py-4 px-4 px-md-0">
+		<div class="row">
+			<div class="col-12 col-lg-9 mx-auto">
+				<div class="card">
+					<div class="card-body card-check shadow-md p-lg-5">
+						<h4 class="mb-0 px-4 mt-3 fw-bolder">Checkout</h4>
+						<ul class="activity-checkout list-group mb-0 px-4 mt-3">
+							<li class="checkout-item">
+								<div class="feed-item-list">
+									<div class="mb-3">
+										<h5 class="font-size-14 fw-bolder my-4">Billing Info :</h5>
+										<form>
+											<div>
+												<div class="row mb-2">
+													<div class="col-lg-4">
+														<div class="mb-3">
+															<label class="form-label fw-bolder" for="fName">First Name*</label>
+															<input type="text" class="form-control" id="fName" placeholder="First name" minlength="3"
+																required />
+															<div id="errorName" class="invalid-feedback">This field is required and must have, at
+																least, 3
+																characters
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="mb-3">
+															<label class="form-label fw-bolder" for="fLastN">Last Name*</label>
+															<input type="text" class="form-control" id="fLastN" placeholder="Last Name" minlength="3"
+																required />
+															<div id="errorLastN" class="invalid-feedback">This field is required and must have, at
+																least, 3
+																characters
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4">
+														<div class="mb-3">
+															<label for="fEmail" class="form-label fw-bolder">Email Address*</label>
+															<input type="email" class="form-control" id="fEmail" placeholder="Enter email"
+																minlength="3" required />
+															<div id="errorEmail" class="invalid-feedback">This field is required and must contain an
+																'@' and
+																have, at
+																least, 3 characters</div>
+														</div>
+													</div>
+												</div>
+												<div class="mb-3">
+													<label class="form-label fw-bolder" for="fAddress">Address*</label>
+													<textarea class="form-control" id="fAddress" rows="3" placeholder="Enter full address"
+														minlength="3" required></textarea>
+													<div id="errorAddress" class="invalid-feedback">This field is required and must have, at
+														least,
+														3 characters
+													</div>
+												</div>
+
+												<div class="row mb-2">
+													<div class="col-lg-4">
+														<div class="mb-3">
+															<label class="form-label fw-bolder" for="fPhone">Phone*</label>
+															<input type="text" class="form-control" id="fPhone" placeholder="Enter Phone no.">
+															<div id="errorPhone" class="invalid-feedback">Invalid phone number!! Must be 9 digits with
+																no
+																letters</div>
+														</div>
+													</div>
+
+													<div class="col-lg-4">
+														<div class="mb-4 mb-lg-0">
+															<label class="form-label fw-bolder" for="fCity">City</label>
+															<input type="text" class="form-control" id="fCity" placeholder="Enter City">
+														</div>
+													</div>
+
+													<div class="col-lg-4">
+														<div class="mb-4 mb-lg-0">
+															<label class="form-label fw-bolder" for="fZip">Zip / Postal code</label>
+															<input type="text" class="form-control" id="fZip" placeholder="Enter Postal code">
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</li>
+							<li class="checkout-item">
+								<div class="feed-item-list">
+									<div class="mb-3">
+										<h5 class="font-size-14 mb-4 fw-bolder">Payment method :</h5>
+										<div class="row mb-2">
+											<div class="col-lg-3 col-sm-6">
+												<div data-bs-toggle="collapse">
+													<label class="card-radio-label mb-2">
+														<input type="radio" name="pay-method" id="pay-methodoption1" class="card-radio-input">
+														<span class="card-radio py-3 text-center text-truncate">
+															<i class="bx bx-credit-card d-block h2 mb-3"></i>
+															Credit / Debit Card
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col-lg-3 col-sm-6">
+												<div>
+													<label class="card-radio-label">
+														<input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input"
+															checked="">
+
+														<span class="card-radio py-3 text-center text-truncate">
+															<i class="bx bx-money d-block h2 mb-3"></i>
+															<span>Cash on Delivery</span>
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col-lg-3 col-sm-6">
+												<div>
+													<label class="card-radio-label">
+														<input type="radio" name="pay-method" id="pay-methodoption2" class="card-radio-input">
+														<span class="card-radio py-3 text-center text-truncate">
+															<i class="bx bxl-paypal d-block h2 mb-3"></i>
+															Paypal
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col d-flex align-items-end justify-content-end">
+												<div class="text-end mt-2 mt-sm-0">
+													<button type="submit" id="btn" class="p-2 px-4 btn btn-submit shadow-sm"
+														onclick="validate()">Submit</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row my-4">
+					<div class="col text-center">
+						<a href="index.html" class="btn btn-link text-muted">
+							<i class="mdi mdi-arrow-left mt-1"></i> Continue Shopping </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- <div class="container">
 		<h1 class="text-center head m-4">Checkout Page</h1>
 
 		<div class="row mr-0">
@@ -132,14 +293,44 @@
 			</div>
 		</form>
 
-	</div>
-
-
+	</div> -->
 	<!-- Footer-->
 	<footer class="py-3 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
-		</div>
+		<nav class="navbar navbar-expand-lg container py-4 d-flex justify-content-center gap-5">
+			<div class="d-flex justify-content-center">
+				<a href="#"><img src="/images/favicon-white.png" class="img-fluid cursor-pointer" alt="logo" width="40"></a>
+			</div>
+			<div class="navbar-collapse flex-grow-0" id="navbarNav">
+				<ul class="navbar-nav d-flex align-items-center justify-content-center gap-3">
+					<a class="nav-link" href="https://www.facebook.com/barcelonactiva/" target="_blank"><img
+							src="/images/icon-facebook.svg" alt="log-facebook"></a>
+					<a class="nav-link" href="https://x.com/barcelonactiva" target="_blank"><img src="/images/icon-twitter.svg"
+							alt="log-twitter"></a>
+					<li class="nav-item text-white">
+						<a class="nav-link text-white fw-light" href="#clothing">Clothing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white fw-light" href="#shoes">Shoes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white fw-light" href="#acessory">Acessory</a>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar-collapse d-flex justify-content-center justify-content-md-end" id="navbarNav">
+				<ul class="navbar-nav text-uppercase d-flex align-items-center justify-content-center gap-3">
+					<li class="nav-item d-flex">
+						<a href="javascript:void(0)" class="btn d-flex align-items-center" type="button" data-bs-toggle="modal"
+							data-bs-target="#cartModal" onclick="open_modal()" data-bs-auto-close="outside">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24">
+								<path fill="#ffffff"
+									d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</footer>
 
 	<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -158,7 +349,7 @@
 							<h3 class="text-center bill px-5">Select Something</h3>
 						</div>
 						<div class="text-center">
-							<a href="checkout.html" class="btn btn-primary m-3">Checkout</a>
+							<a href="checkout.html" class="btn btn-submit m-3">Checkout</a>
 						</div>
 					</div>
 				</div>
