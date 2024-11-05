@@ -166,7 +166,9 @@ body {
 
 .card {
   border: none;
-  border-radius: 10px;
+}
+
+.card-body {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -196,9 +198,9 @@ body {
 }
 
 .card-btn {
-  background-color: rgb(0, 170, 136);
-  border: none;
-  color: white;
+  background-color: white;
+  border: 2px solid black;
+  color: black;
   padding: 1rem 2.2rem;
   border-radius: 5px;
   text-transform: uppercase;
@@ -208,8 +210,9 @@ body {
 }
 
 .card-btn:hover {
-  background-color: rgba(0, 170, 136, 0.6);
-  border: none;
+  background-color: black;
+  border: 2px solid black;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
