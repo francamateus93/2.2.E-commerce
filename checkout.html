@@ -101,48 +101,49 @@
 													</div>
 													<div class="col-lg-4">
 														<div class="mb-3">
-															<label for="fEmail" class="form-label fw-bolder">Email Address*</label>
-															<input type="email" class="form-control" id="fEmail" placeholder="Enter email"
-																minlength="3" required />
-															<div id="errorEmail" class="invalid-feedback">This field is required and must contain an
-																'@' and
-																have, at
-																least, 3 characters</div>
-														</div>
-													</div>
-												</div>
-												<div class="mb-3">
-													<label class="form-label fw-bolder" for="fAddress">Address*</label>
-													<textarea class="form-control" id="fAddress" rows="3" placeholder="Enter full address"
-														minlength="3" required></textarea>
-													<div id="errorAddress" class="invalid-feedback">This field is required and must have, at
-														least,
-														3 characters
-													</div>
-												</div>
-
-												<div class="row mb-2">
-													<div class="col-lg-4">
-														<div class="mb-3">
 															<label class="form-label fw-bolder" for="fPhone">Phone*</label>
-															<input type="text" class="form-control" id="fPhone" placeholder="Enter Phone no.">
-															<div id="errorPhone" class="invalid-feedback">Invalid phone number!! Must be 9 digits with
+															<input type="text" class="form-control" id="fPhone" placeholder="Enter Phone no."
+																minlength="3" required />
+															<div id="errorPhone" class="invalid-feedback">Invalid phone number!! Must be 9 digits
+																with
 																no
 																letters</div>
 														</div>
 													</div>
 
-													<div class="col-lg-4">
-														<div class="mb-4 mb-lg-0">
-															<label class="form-label fw-bolder" for="fCity">City</label>
-															<input type="text" class="form-control" id="fCity" placeholder="Enter City">
+													<div class="row mb-2">
+
+														<div class="col-lg-4">
+															<div class="mb-3">
+																<label for="fEmail" class="form-label fw-bolder">Email Address*</label>
+																<input type="email" class="form-control" id="fEmail" placeholder="Enter email"
+																	minlength="3" required />
+																<div id="errorEmail" class="invalid-feedback">This field is required and must contain an
+																	'@' and
+																	have, at
+																	least, 3 characters</div>
+															</div>
+														</div>
+														<div class="col-lg-4">
+															<div class="mb-4 mb-lg-0">
+																<label class="form-label fw-bolder" for="fPassword">Password*</label>
+																<input type="text" class="form-control" id="fPassword" placeholder="Enter Password"
+																	minlength="3" required />
+																<div id="errorPassword" class="invalid-feedback">This field is required and must have,
+																	at
+																	least,
+																	3 characters
+																</div>
+															</div>
 														</div>
 													</div>
-
-													<div class="col-lg-4">
-														<div class="mb-4 mb-lg-0">
-															<label class="form-label fw-bolder" for="fZip">Zip / Postal code</label>
-															<input type="text" class="form-control" id="fZip" placeholder="Enter Postal code">
+													<div class="mb-3">
+														<label class="form-label fw-bolder" for="fAddress">Address*</label>
+														<textarea class="form-control" id="fAddress" rows="3" placeholder="Enter full address"
+															minlength="3" required></textarea>
+														<div id="errorAddress" class="invalid-feedback">This field is required and must have, at
+															least,
+															3 characters
 														</div>
 													</div>
 												</div>
