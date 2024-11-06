@@ -47,13 +47,11 @@ Para iniciar el proyecto localmente:
 
 - 1.Abre tu terminal y navega a la carpeta del proyecto.
 
-- 2.Abre tu terminal y navega a la carpeta del proyecto.
-
-- 3.Compila los archivos SASS:
+- 2.Compila los archivos SASS:
 
 sass scss/main.scss css/styles.css --watch
 
-- 4.Abre el archivo index.html con tu navegador preferido
+- 3.Abre el archivo index.html con tu navegador preferido
 
 🤝 Contribuciones
 
